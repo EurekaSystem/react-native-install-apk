@@ -24,3 +24,10 @@ you can use [react-native-fs](https://github.com/johanneslumpe/react-native-fs) 
             NativeModules.InstallApk.install(filePath);
         }
     });
+
+### IMPORTANT!
+modify this row in AndroidManifest.xml
+
+      android:allowBackup="true"
+
+

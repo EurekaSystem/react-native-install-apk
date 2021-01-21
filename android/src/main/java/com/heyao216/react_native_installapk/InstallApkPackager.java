@@ -9,21 +9,25 @@ import com.facebook.react.uimanager.ViewManager;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by heyao on 2016/11/4.
+ * Edited by marco.raffael on 2021/01/21;
  */
 public class InstallApkPackager implements ReactPackage{
-    @Override
+
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new InstallApkModule(reactContext));
+        List<NativeModule> modules = new ArrayList<>();
+        modules.add(new InstallApkModule(reactContext));
+        return modules;
     }
 
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
 
-    @Override
+
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
     }
